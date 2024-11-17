@@ -51,6 +51,16 @@ Configuration variables
 
 .. note::
 
+    Pulse Counter ULP keeps time between reads by counting how many times the
+    ULP program runs. This count is stored in a ``uint16_t``. Accounting for
+    potential time between the last read and the start of deep sleep, the
+    recommended maximum deep sleep duration is
+    ``sleep_duration * 65535 - update_interval``.
+
+    For the default values, this is just over 20 minutes.
+
+.. note::
+
     See :doc:`integration sensor </components/sensor/integration>` for summing up pulse counter ULP
     values over time.
 
