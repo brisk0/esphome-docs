@@ -48,9 +48,9 @@ Configuration variables
 - **update_interval** (*Optional*, :ref:`config-time`): The interval to check
   the sensor while awake. The sensor will not update while in deep sleep, but will
   update on wake regardless of ``update_interval``. Defaults to ``60s``.
-- **edges_wakeup** (*Optional*, :ref:`config-time`): After deteting the specified 
+- **edges_wakeup** (*Optional*, :ref:`config-time`): After detecting the specified 
   number of pulses while being asleep, the main SoC will be woken up.
-  A number of ``0`` is disabling the feature and the main SoC will only awak
+  A number of ``0`` is disables the feature and the main SoC will only awake
   after the configured wakeup time.
 - **total** (*Optional*): Report the total number of pulses counted since the last reset.
 - All other options from :ref:`Sensor <config-sensor>`.
@@ -66,7 +66,7 @@ Configuration variables
     For the default values, this is just over 20 minutes.
 
     The counting of total pulses is not impacted by this limitation.
-    If the rate sensor is not of intereste, longer sleep times can be used,
+    If the rate sensor is not of interest, longer sleep times can be used,
     but the rate sensor will report invalid values.
 
 .. note::
